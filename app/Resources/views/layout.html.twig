@@ -3,17 +3,47 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Musée du Louvre - {% endblock %}</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block stylesheets %}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="{{ asset('css/layoutGeneral.css') }}" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+             <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
     </head>
 
     <body>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Billetterie du musée du Louvre</h1>
+        <header>
+            <div id="navig" class="container-fluid col-xs-12">
+                <div id="titreSite" class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
+                    <a href="">Billetterie - Musée du Louvre</a>
+                </div>
+                <div id="boutonPanier" class="col-md-2 col-md-offset-1 col-xs-2">
+                    <a class="btn btn-success hidden-sm hidden-xs"><i class="fa fa-shopping-cart"></i> Panier</a>
+                    <a class="btn btn-success hidden-md hidden-lg"><i class="fa fa-shopping-cart"></i></a>
+                </div>
             </div>
-        </div>
+        </header>
+
+        <div id="content" class="container-fluid col-xs-12">
+            {% block corps %}
+            {% endblock %}
+        </div>  
+
+        <footer>
+            <div id="foot" class="container-fluid col-xs-12">   
+                <a href="#" class="col-md-3 col-md-offset-2 col-xs-12 text-center">Conditions générales de vente</a>
+                <a href="#" class="col-md-2 col-xs-12 text-center">Contact</a>
+                <a href="#" class="col-md-3 col-xs-12 text-center">Créé par agence XXXX</a>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,3 +1,5 @@
+/* Style header et footer */
+
 @font-face {
 	font-family: 'Birds';
 	src: url('BirdsOfParadise.ttf');
@@ -107,4 +109,35 @@
 	#foot {
 		padding-bottom: 0px !important;
 	}
+}
+
+/* Style template Tarifs et horaires */
+
+p {
+	font-size: 17px !important;
+}
+
+#horaires {
+	margin-top: 20px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	background-color: transparent !important;
+	border: none !important;
+}
+
+#tarifs {
+	margin-top: 20px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+#billetsAide {
+	margin-top: 20px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	margin-bottom: 20px !important;
+}
+
+#billetsAide a {
+	color: rgb(35, 35, 35) !important;
 }

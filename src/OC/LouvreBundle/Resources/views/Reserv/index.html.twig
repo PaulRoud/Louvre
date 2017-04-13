@@ -1,1 +1,10 @@
 {% extends "::layout.html.twig" %}
+
+{% block corps %}
+
+	<div id="colonneGauche" class="col-md-7 col-xs-12">
+	</div>
+	
+	{{ include("OCLouvreBundle:Reserv:tarifsEtHoraires.html.twig") }}
+
+{% endblock %}

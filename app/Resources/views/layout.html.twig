@@ -8,6 +8,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="{{ asset('cssdatepicker/bootstrap-datepicker.min.css') }}"/>
             <link rel="stylesheet" href="{{ asset('css/layoutGeneral.css') }}" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -45,5 +46,17 @@
                 <a href="#" class="col-md-3 col-xs-12 text-center">Créé par agence XXXX</a>
             </div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/web/js/bootstrap-datepicker.min.js"></script>
+        <script src="/web/locales/bootstrap-datepicker.fr.min.js"></script>
+        <script> 
+        $("#reservDate").datepicker({
+            format: 'dd/mm/yyyy',
+            startDate: '+0d',
+            endDate: '+1y',
+            language: 'fr',
+        });
+        </script>
     </body>
 </html>
